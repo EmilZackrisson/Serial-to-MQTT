@@ -25,8 +25,8 @@ def on_connect(client, userdata, flags, rc):
 		print("Connection failed")
 
 def on_message(client, userdata, message):
-	latest = message.payload
-	client.publish(topic, latest)
+    latest = message.payload
+    client.publish(topic, latest)
     print(latest)
 
 Connected = False

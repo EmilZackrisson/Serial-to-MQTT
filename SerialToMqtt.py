@@ -27,7 +27,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, message):
 	latest = message.payload
 	client.publish(topic, latest)
-
+    print(latest)
 
 Connected = False
 
@@ -41,8 +41,6 @@ client.loop_start()
 
 while Connected != True:
 	time.sleep(0.1)
-
-client.subscribe(topic + "/command")
 
 try:
 	while True:

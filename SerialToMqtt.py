@@ -26,7 +26,7 @@ def on_connect(client, userdata, flags, rc):
 
 def on_message(client, userdata, message):
 	latest = message.payload
-	client.publish(topic + "/state", latest)
+	client.publish(topic, latest)
 
 
 Connected = False

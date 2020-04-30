@@ -6,7 +6,7 @@ broker_adress= "192.168.0.56"
 port = 1883
 client = mqttClient.Client("Python")
 topic = "ArduinoHylla"
-username_pw_set(mqtt, zacke)
+username_pw_set(mqtt, password=zacke)
 
 serial = serial.Serial('/dev/ttyUSB0', 9600)
 time.sleep(2)
